@@ -42,7 +42,7 @@ pub mod caesar {
 }
 
 //TODO: Find better way than char.to_string()
-pub mod vignere {
+pub mod vigenere {
     pub fn encipher(msg: &str, key: &str) -> String {
         let mut key_iter = key.chars().cycle();
         let out: String = msg
@@ -113,7 +113,7 @@ mod tests {
     }
 
     #[test]
-    fn test_vignere_encipher() {
-        assert_eq!(super::vignere::encipher("attackatdawn", "lemon"), "lxfopvefrnhr")
+    fn test_vigenere_encipher() {
+        assert_eq!(super::vigenere::encipher("attackatdawn", "lemon"), "lxfopvefrnhr")
     }
 }
