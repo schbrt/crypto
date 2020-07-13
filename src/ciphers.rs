@@ -33,7 +33,7 @@ pub mod caesar {
         let mut lowest = f32::MAX;
         let mut best = 0;
         for i in 1..26 {
-            let score = super::kullback_leibler(corpus_dist.to_vec(), super::get_character_frequencies(&decipher(msg, i)));
+            let score = super::kullback_leibler(super::get_character_frequencies(&decipher(msg, i)), corpus_dist.to_vec());
             println!("{}", score);
             if score < lowest {
                 lowest = score;
